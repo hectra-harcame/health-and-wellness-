@@ -23,25 +23,91 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background: #71a3a1;
+            color: #000000;
             padding: 1rem;
             text-align: center;
         }
 
         nav ul {
-            list-style: none;
+            list-style: inside;
             margin: 0;
             padding: 0;
         }
 
         nav li {
-            display: inline-block;
+            display: inline-table;
             margin-right: 1rem;
         }
 
+        .btn {
+            position: relative;
+            font-size: 20px;
+            border-radius: relative;
+            mix-blend-mode: color-burn;
+            display: inline-table;
+            transition: color 0.3s ease;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0%;
+            width: 100%;
+            height: 3px;
+            background: #0d6f9694;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            color: #0e3261;;
+        }
+
+        .btn:hover::before {
+            transform: scaleX(1);
+        }
+
+        .trm:hover {
+            color: #007483;;
+        }
+
+        .trm:hover::before {
+            transform: scaleX(1);
+        }
+
+        .trm{
+            position: relative;
+            font-size: 20px ;
+            border: none;
+            mix-blend-mode: color-burn;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .trm::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #0d6f9694;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .trm li {
+            display: inline-table;
+        }
+
+        .trm a {
+            color: #383838;
+            text-decoration: none;
+        }
         nav a {
-            color: #fff;
+            color: #292929;
             text-decoration: none;
         }
 
@@ -50,8 +116,8 @@
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #71a3a1;
+            color: #000000;
             padding: 1rem;
             text-align: center;
         }
@@ -87,9 +153,8 @@
         <h1 style="font-size: 80px;">Hectra Harcame</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="copyright.html">Terms and conditions</a></li>
+                <li><a href="index.html"><button class="btn">Home</button></a></li>
+                <li><a href="blog.html"><button class="btn">Blog</button></a></li>
             </ul>
         </nav>
     </header>
@@ -121,7 +186,10 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Hectra Harcame. All rights reserved.</p>
+            <p>&copy;Hectra Harcame. All rights reserved.</p>
+            <button class="trm">
+            <li><a href="copyright.html">Terms and conditions</a></li>
+            </button>
     </footer>
 </body>
 </html>
